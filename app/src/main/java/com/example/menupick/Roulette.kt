@@ -1,13 +1,16 @@
 package com.example.menupick
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.*
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.bluehomestudio.luckywheel.WheelItem
 import com.example.menupick.databinding.ActivityRouletteBinding
@@ -34,7 +37,15 @@ class Roulette : AppCompatActivity() {
             //아이템 변수에 담기
             val wheelItem = wheelItems[point.toInt() - 1]
             val money = wheelItem.text
-            Toast.makeText(applicationContext, money + "는 어떠신가요?", Toast.LENGTH_SHORT).show()
+            AlertDialog.Builder(this)
+                .setTitle("음식을 추천해드릴게요!")
+                .setMessage(money + "는 어떠신가요?")
+                .setPositiveButton("좋아요"
+                ) { _, _ -> Log.d("MyTag", "positive") }
+                .setNegativeButton("싫어요"     // 싫어요 색깔 black.200으로 바꾸기
+                ) { _, _ -> Log.d("MyTag", "negative") }
+                .create()
+                .show()
         }
         binding.spinBtn.setOnClickListener {
             val random: Random = Random
@@ -95,4 +106,5 @@ class Roulette : AppCompatActivity() {
         _drawable.draw(canvas)//그림
         return bitmap
     }
+
 }
