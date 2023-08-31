@@ -1,25 +1,26 @@
 package com.example.menupick
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.*
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bluehomestudio.luckywheel.WheelItem
 import com.example.menupick.databinding.ActivityRouletteBinding
 import kotlin.random.Random
 
-class Roulette : AppCompatActivity()
-{
+class Roulette : AppCompatActivity() {
     //룰렛 변수 선언
     private lateinit var wheelItems:ArrayList<WheelItem>//리스트
     private lateinit var point: String
     //뷰 바인딩
     private lateinit var binding: ActivityRouletteBinding
-    override fun onCreate(savedInstanceState: Bundle?)
-    {
+    override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         binding = ActivityRouletteBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -39,6 +40,13 @@ class Roulette : AppCompatActivity()
             val random: Random = Random
             point = (random.nextInt(6) + 1).toString() //1~6, exclusive 라서 +1 해줌
             binding.roulette.rotateWheelTo(point.toInt())//1-6까지의 숫자중 한곳에 포인트가 가르키게 됨
+        }
+
+        //        Bottom bar
+        val button : Button = findViewById(R.id.bar_foodBtn)
+        button.setOnClickListener {
+            val intent = Intent(this, FoodHome::class.java)
+            startActivity(intent)
         }
     }
     @SuppressLint("UseCompatLoadingForDrawables")

@@ -12,9 +12,7 @@ class FoodHome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
 
-
 //        Bottom bar
-
         val button : Button = findViewById(R.id.bar_rouletteBtn)
         button.setOnClickListener {
             val intent = Intent(this, Roulette::class.java)
