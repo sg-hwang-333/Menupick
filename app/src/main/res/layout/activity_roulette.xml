@@ -63,7 +63,7 @@
             android:textSize="@dimen/R20"
             android:text="@string/bar_popularBtn"
             android:background="@drawable/bar_btn_notcheck"
-            android:id="@+id/bar_popularBtn"
+            android:id="@+id/bar_bestBtn"
             android:textColor="@color/black.200"/>
         <android.widget.Button
             android:layout_weight="1"

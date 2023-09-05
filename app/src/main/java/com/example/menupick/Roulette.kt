@@ -1,7 +1,6 @@
 package com.example.menupick
 
 import android.annotation.SuppressLint
-import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.*
 import android.graphics.drawable.BitmapDrawable
@@ -9,7 +8,6 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.bluehomestudio.luckywheel.WheelItem
@@ -37,6 +35,7 @@ class Roulette : AppCompatActivity() {
             //아이템 변수에 담기
             val wheelItem = wheelItems[point.toInt() - 1]
             val money = wheelItem.text
+
             AlertDialog.Builder(this)
                 .setTitle("음식을 추천해드릴게요!")
                 .setMessage(money + "는 어떠신가요?")
@@ -47,6 +46,7 @@ class Roulette : AppCompatActivity() {
                 .create()
                 .show()
         }
+
         binding.spinBtn.setOnClickListener {
             val random: Random = Random
             point = (random.nextInt(6) + 1).toString() //1~6, exclusive 라서 +1 해줌
@@ -54,12 +54,18 @@ class Roulette : AppCompatActivity() {
         }
 
         //        Bottom bar
-        val button : Button = findViewById(R.id.bar_foodBtn)
-        button.setOnClickListener {
+        val foodhomebutton : Button = findViewById(R.id.bar_foodBtn)
+        foodhomebutton.setOnClickListener {
             val intent = Intent(this, FoodHome::class.java)
             startActivity(intent)
         }
+        val bestbutton : Button = findViewById(R.id.bar_bestBtn)
+        bestbutton.setOnClickListener {
+            val intent = Intent(this, Best::class.java)
+            startActivity(intent)
+        }
     }
+
     @SuppressLint("UseCompatLoadingForDrawables")
     private fun generateWheelItems()
     {

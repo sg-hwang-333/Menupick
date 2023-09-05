@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:iconifiedByDefault="false"
+                android:background="@drawable/search_bg"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="Search" />
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.widget.Button
+                    android:layout_marginRight="10dp"
+                    android:text="@string/search_food_1"
+                    android:textSize="@dimen/R16"
+                    android:background="@drawable/search_btn_notcheck"
+                    android:layout_width="65dp"
+                    android:layout_height="35dp" />
+                <android.widget.Button
+                    android:layout_marginRight="10dp"
+                    android:text="@string/search_food_2"
+                    android:textSize="@dimen/R16"
+                    android:background="@drawable/search_btn_notcheck"
+                    android:layout_width="65dp"
+                    android:layout_height="35dp" />
+                <android.widget.Button
+                    android:layout_marginRight="10dp"
+                    android:text="@string/search_food_3"
+                    android:textSize="@dimen/R16"
+                    android:background="@drawable/search_btn_notcheck"
+                    android:layout_width="65dp"
+                    android:layout_height="35dp" />
+                <android.widget.Button
+                    android:layout_marginRight="10dp"
+                    android:text="@string/search_food_4"
+                    android:textSize="@dimen/R16"
+                    android:textColor="@color/white"
+                    android:background="@drawable/search_btn_check"
+                    android:layout_width="65dp"
+                    android:layout_height="35dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.widget.Button
+                    android:layout_marginRight="10dp"
+                    android:text="@string/search_food_5"
+                    android:textSize="@dimen/R16"
+                    android:background="@drawable/search_btn_notcheck"
+                    android:layout_width="65dp"
+                    android:layout_height="35dp" />
+                <android.widget.Button
+                    android:layout_marginRight="10dp"
+                    android:text="@string/search_food_6"
+                    android:textSize="@dimen/R16"
+                    android:background="@drawable/search_btn_notcheck"
+                    android:layout_width="65dp"
+                    android:layout_height="35dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="35dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/search_food_4"
+                        android:textSize="@dimen/M24"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="@string/top3"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/M24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <android.widget.Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textSize="@dimen/R20"
+            android:text="@string/bar_foodBtn"
+            android:background="@drawable/bar_btn_notcheck"
+            android:id="@+id/bar_foodBtn"
+            android:textColor="@color/black.200"/>
+        <android.widget.Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textSize="@dimen/B24"
+            android:text="@string/bar_popularBtn"
+            android:background="@drawable/bar_btn_check"
+            android:id="@+id/bar_bestBtn"
+            android:textColor="@color/white"/>
+        <android.widget.Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textSize="@dimen/R20"
+            android:text="@string/bar_rouletteBtn"
+            android:background="@drawable/bar_btn_notcheck"
+            android:id="@+id/bar_rouletteBtn"
+            android:textColor="@color/black.200"/>
+    </LinearLayout>
+
+</LinearLayout>

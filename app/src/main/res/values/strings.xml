@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="title_activity_main">MainActivity</string>
     <string name="app_name">menupick</string>
 
+    <!--  food  -->
     <string name="add">추가하기</string>
-
     <string name="chicken">치킨</string>
-
     <string name="tag">#금요일_밤 #와인과_함께</string>
 
+    <!--  best  -->
+    <string name="search_food_1">한식</string>
+    <string name="search_food_2">일식</string>
+    <string name="search_food_3">중식</string>
+    <string name="search_food_4">양식</string>
+    <string name="search_food_5">분식</string>
+    <string name="search_food_6">디저트</string>
 
+    <string name="top3"> Top 3</string>
+
+
+
+    <!--  bottombar  -->
     <string name="bar_foodBtn">음식</string>
     <string name="bar_popularBtn">인기</string>
     <string name="bar_rouletteBtn">룰렛</string>
-    <string name="title_activity_main">MainActivity</string>
+
+
+
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

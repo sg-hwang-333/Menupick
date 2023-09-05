@@ -16,6 +16,10 @@
             android:exported="true">
         </activity>
         <activity
+            android:name=".Best"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".FoodHome"
             android:exported="true"
             android:label="@string/title_activity_main"
