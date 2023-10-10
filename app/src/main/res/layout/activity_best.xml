@@ -1,118 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/white"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:backgroundTint="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <ScrollView
+        android:scrollbars="none"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:orientation="vertical"
+            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/search_view"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                app:iconifiedByDefault="false"
                 android:background="@drawable/search_bg"
+                app:iconifiedByDefault="false"
                 app:queryBackground="@android:color/transparent"
-                app:queryHint="Search" />
-            <LinearLayout
-                android:gravity="center"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <android.widget.Button
-                    android:layout_marginRight="10dp"
-                    android:text="@string/search_food_1"
-                    android:textSize="@dimen/R16"
-                    android:background="@drawable/search_btn_notcheck"
-                    android:layout_width="65dp"
-                    android:layout_height="35dp" />
-                <android.widget.Button
-                    android:layout_marginRight="10dp"
-                    android:text="@string/search_food_2"
-                    android:textSize="@dimen/R16"
-                    android:background="@drawable/search_btn_notcheck"
-                    android:layout_width="65dp"
-                    android:layout_height="35dp" />
-                <android.widget.Button
-                    android:layout_marginRight="10dp"
-                    android:text="@string/search_food_3"
-                    android:textSize="@dimen/R16"
-                    android:background="@drawable/search_btn_notcheck"
-                    android:layout_width="65dp"
-                    android:layout_height="35dp" />
-                <android.widget.Button
-                    android:layout_marginRight="10dp"
-                    android:text="@string/search_food_4"
-                    android:textSize="@dimen/R16"
-                    android:textColor="@color/white"
-                    android:background="@drawable/search_btn_check"
-                    android:layout_width="65dp"
-                    android:layout_height="35dp" />
-            </LinearLayout>
+                app:queryHint="음식 이름, 해시태그 등으로 검색..." />
 
-            <LinearLayout
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <android.widget.Button
-                    android:layout_marginRight="10dp"
-                    android:text="@string/search_food_5"
-                    android:textSize="@dimen/R16"
-                    android:background="@drawable/search_btn_notcheck"
-                    android:layout_width="65dp"
-                    android:layout_height="35dp" />
-                <android.widget.Button
-                    android:layout_marginRight="10dp"
-                    android:text="@string/search_food_6"
-                    android:textSize="@dimen/R16"
-                    android:background="@drawable/search_btn_notcheck"
-                    android:layout_width="65dp"
-                    android:layout_height="35dp" />
+            <GridLayout
+                android:foregroundGravity="center"
+                android:id="@+id/radioGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                android:rowCount="2"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
 
-            </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/korFoodBtn"
+                        android:checked="true"
+                        android:background="@drawable/unselected_background"
+                        android:button="@null"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:layout_width="65dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/search_food_1"
+                        android:textSize="@dimen/R16"/>
 
-            <LinearLayout
-                android:layout_marginTop="35dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_marginBottom="15dp"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
+                    <RadioButton
+                        android:background="@drawable/unselected_background"
+                        android:button="@null"
+                        android:textAlignment="center"
+                        android:id="@+id/japFoodBtn"
+                        android:layout_width="65dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/black.400"
+                        android:text="@string/search_food_2"
+                        android:textSize="@dimen/R16" />
+
+                    <RadioButton
+                        android:background="@drawable/unselected_background"
+                        android:button="@null"
+                        android:textAlignment="center"
+                        android:id="@+id/chiFoodBtn"
+                        android:layout_width="65dp"
+                        android:layout_height="35dp"
+                        android:textColor="@color/black.400"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/search_food_3"
+                        android:textSize="@dimen/R16" />
+
+                    <RadioButton
+                        android:background="@drawable/unselected_background"
+                        android:button="@null"
+                        android:textAlignment="center"
+                        android:id="@+id/wesFoodBtn"
+                        android:layout_width="65dp"
+                        android:layout_height="35dp"
                         android:text="@string/search_food_4"
-                        android:textSize="@dimen/M24"
-                        android:textColor="@color/black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textColor="@color/black.400"
+                        android:textSize="@dimen/R16" />
+                <RadioButton
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:layout_width="65dp"
+                    android:layout_height="35dp" />
+
+                    <RadioButton
+                        android:background="@drawable/unselected_background"
+                        android:button="@null"
+                        android:textAlignment="center"
+                        android:id="@+id/snackBtn"
+                        android:layout_width="65dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/search_food_5"
+                        android:textColor="@color/black.400"
+                        android:textSize="@dimen/R16"
+                        custom:layout_row="1"
+                        custom:layout_column="1"/>
+
+                    <RadioButton
+                        android:background="@drawable/unselected_background"
+                        android:button="@null"
+                        android:textAlignment="center"
+                        android:id="@+id/dessertBtn"
+                        android:layout_width="65dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="35dp"
+                        android:text="@string/search_food_6"
+                        android:textColor="@color/black.400"
+                        android:textSize="@dimen/R16"
+                        custom:layout_row="1"
+                        custom:layout_column="2"/>
+
+            </GridLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
                     <TextView
+                        android:id="@+id/foodText"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/search_food_1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/M24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="@string/top3"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/M24"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textSize="@dimen/M24" />
+
                 </LinearLayout>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:background="@drawable/round_btn"
+                        android:drawableTop="@drawable/image_resize"
+                        android:gravity="center"
+                        android:text="@string/chicken" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:background="@drawable/round_btn"
+                        android:drawableTop="@drawable/image_resize"
+                        android:gravity="center"
+                        android:text="@string/chicken" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:background="@drawable/round_btn"
+                        android:drawableTop="@drawable/image_resize"
+                        android:gravity="center"
+                        android:text="@string/chicken" />
+
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/idFABAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/purple_200"
+            android:contentDescription="@string/app_name"
+            android:padding="4dp"
+            android:src="@drawable/ic_add"
+            app:backgroundTint="@color/purple_200"
+            app:tint="@color/white"/>
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -145,5 +285,6 @@
             android:id="@+id/bar_rouletteBtn"
             android:textColor="@color/black.200"/>
     </LinearLayout>
+
 
 </LinearLayout>

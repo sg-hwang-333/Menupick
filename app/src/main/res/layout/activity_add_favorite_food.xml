@@ -1,6 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:backgroundTint="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="26.5dp"
+        android:paddingBottom="26.5dp"
+        android:paddingLeft="25dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="메뉴 추가"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:id="@+id/before_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_navigate_before_24"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/bring_picture"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/picture_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:text="사진 가져오기"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/R16" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="메뉴 이름"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/R16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:hint="메뉴 이름을 입력하세요"
+                    android:textColorHint="@color/black.300"
+                    android:paddingLeft="14dp"
+                    android:textSize="14dp"
+                    android:background="@drawable/input_bg_border"
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="태그"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/R16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/editTextHashtag"
+                    android:hint="해시태그 입력"
+                    android:layout_marginRight="10dp"
+                    android:textColorHint="@color/black.300"
+                    android:paddingLeft="14dp"
+                    android:textSize="14dp"
+                    android:background="@drawable/input_bg_border"
+                    android:layout_width="185dp"
+                    android:layout_height="35dp"/>
+                <android.widget.Button
+                    android:id="@+id/buttonSaveHashtag"
+                    android:layout_gravity="center"
+                    android:text="등록"
+                    android:textSize="@dimen/R16"
+                    android:textColor="@color/white"
+                    android:background="@drawable/input_bg_full"
+                    android:layout_width="55dp"
+                    android:layout_height="34dp"/>
+
+            </LinearLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/hashtagsContainer"
+                android:layout_gravity="right"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:flexWrap="wrap"/>
+
+            <android.widget.Button
+                android:text="추가하기"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="60dp"
+                android:textSize="@dimen/R20"
+                android:textColor="@color/white"
+                android:background="@drawable/input_bg_full"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

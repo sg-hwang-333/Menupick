@@ -9,9 +9,12 @@ import android.widget.Button
 
 class FoodHome : AppCompatActivity() {
 
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
+
 
 //        Bottom bar
         val bestbutton : Button = findViewById(R.id.bar_bestBtn)

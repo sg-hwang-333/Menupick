@@ -9,6 +9,7 @@
 
     <!--  header  -->
     <ScrollView
+        android:scrollbars="none"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -30,17 +31,7 @@
                     android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
-                <TextView
-                    android:text="더보기>"
-                    android:layout_gravity="center|right"
-                    android:textSize="@dimen/R13"
-                    android:textColor="@color/mainColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+
             </LinearLayout>
 
 
@@ -63,6 +54,7 @@
                         android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/black"
                         android:background="@drawable/round_btn"
                         android:drawableTop="@drawable/image_resize"
                         android:gravity="center"
@@ -83,6 +75,7 @@
                         android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/black"
                         android:background="@drawable/round_btn"
                         android:drawableTop="@drawable/image_resize"
                         android:gravity="center"
@@ -102,6 +95,7 @@
                         android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/black"
                         android:background="@drawable/round_btn"
                         android:drawableTop="@drawable/image_resize"
                         android:gravity="center"
@@ -129,17 +123,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <View
-                        android:layout_weight="1"
                         android:layout_width="0dp"
-                        android:layout_height="0dp"/>
-
-                    <android.widget.Button
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:text="더보기>"
+                        android:layout_gravity="center|right"
+                        android:textSize="@dimen/R13"
+                        android:textColor="@color/mainColor"
                         android:layout_width="wrap_content"
-                        android:layout_height="34dp"
-                        android:background="@drawable/add_btn"
-                        android:textSize="@dimen/R16"
-                        android:textColor="@color/white"
-                        android:text="@string/add" />
+                        android:layout_height="wrap_content"/>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -229,15 +223,16 @@
             android:background="@drawable/bar_btn_notcheck"
             android:id="@+id/bar_bestBtn"
             android:textColor="@color/black.200"/>
+
         <android.widget.Button
-            android:layout_weight="1"
+            android:id="@+id/bar_rouletteBtn"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:textSize="@dimen/R20"
-            android:text="@string/bar_rouletteBtn"
+            android:layout_weight="1"
             android:background="@drawable/bar_btn_notcheck"
-            android:id="@+id/bar_rouletteBtn"
-            android:textColor="@color/black.200"/>
+            android:text="@string/bar_rouletteBtn"
+            android:textColor="@color/black.200"
+            android:textSize="@dimen/R20" />
     </LinearLayout>
 
 </LinearLayout>
