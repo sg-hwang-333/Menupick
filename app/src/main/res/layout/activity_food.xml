@@ -200,6 +200,13 @@
     </ScrollView>
 
 
+    <View
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/upper_shadow_todo">
+    </View>
     <!--  Bottom  -->
     <LinearLayout
         android:layout_width="match_parent"

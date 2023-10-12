@@ -40,7 +40,13 @@
             android:textSize="25sp"/>
     </LinearLayout>
 
-
+    <View
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/upper_shadow_todo">
+    </View>
     <!--  Bottom  -->
     <LinearLayout
 

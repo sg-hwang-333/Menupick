@@ -39,6 +39,7 @@ android {
 dependencies {
     implementation 'com.github.mmoamenn:LuckyWheel_Android:0.3.0' //룰렛 라이브러리
     implementation 'com.google.android.flexbox:flexbox:3.0.0'   // FlexboxLayout
+    implementation 'com.google.android.material:material:1.5.0'  // best 하단고정
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
