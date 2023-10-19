@@ -41,67 +41,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="140dp">
 
-                <LinearLayout
-                    android:layout_weight="1"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
                     android:elevation="5dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/button_bg"
-                    android:orientation="vertical"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp">
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/black"
-                        android:background="@drawable/round_btn"
-                        android:drawableTop="@drawable/image_resize"
-                        android:gravity="center"
-                        android:text="@string/chicken" />
-
-                </LinearLayout>
-                <LinearLayout
                     android:layout_weight="1"
-                    android:elevation="5dp"
+                    android:background="@drawable/round_btn"
+                    android:drawableTop="@drawable/image_resize"
+                    android:gravity="center"
+                    android:text="@string/chicken"
+                    android:textColor="@color/black" />
+                <TextView
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/button_bg"
-                    android:orientation="vertical"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp">
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/black"
-                        android:background="@drawable/round_btn"
-                        android:drawableTop="@drawable/image_resize"
-                        android:gravity="center"
-                        android:text="@string/chicken" />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
                     android:elevation="5dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/button_bg"
-                    android:orientation="vertical"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp">
-
-                    <TextView
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/black"
-                        android:background="@drawable/round_btn"
-                        android:drawableTop="@drawable/image_resize"
-                        android:gravity="center"
-                        android:text="@string/chicken" />
-
-                </LinearLayout>
+                    android:layout_weight="1"
+                    android:background="@drawable/round_btn"
+                    android:drawableTop="@drawable/image_resize"
+                    android:gravity="center"
+                    android:text="@string/chicken"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:elevation="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_btn"
+                    android:drawableTop="@drawable/image_resize"
+                    android:gravity="center"
+                    android:text="@string/chicken"
+                    android:textColor="@color/black" />
 
             </LinearLayout>
 
@@ -127,6 +98,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"/>
                     <TextView
+                        android:id="@+id/favorite_food_view"
                         android:text="더보기>"
                         android:layout_gravity="center|right"
                         android:textSize="@dimen/R13"

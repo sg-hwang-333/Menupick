@@ -24,6 +24,11 @@
             android:exported="true">
         </activity>
         <activity
+            android:name=".Favorite_food"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".FoodHome"
             android:exported="true"
             android:label="@string/title_activity_main"

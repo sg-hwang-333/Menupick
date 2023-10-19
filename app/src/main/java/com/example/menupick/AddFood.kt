@@ -22,7 +22,7 @@ class AddFood : AppCompatActivity()  {
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_favorite_food)
+        setContentView(R.layout.activity_add_food)
 
         imageView = findViewById(R.id.imageView)
         val selectImageButton = findViewById<LinearLayout>(R.id.bring_picture)

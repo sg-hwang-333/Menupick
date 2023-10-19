@@ -10,6 +10,7 @@ import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.bluehomestudio.luckywheel.WheelItem
 import com.example.menupick.databinding.ActivityRouletteBinding
 import kotlin.random.Random
