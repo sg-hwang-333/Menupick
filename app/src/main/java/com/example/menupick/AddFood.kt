@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.View
 import android.widget.*
 import com.google.android.flexbox.FlexboxLayout
 
@@ -42,6 +43,29 @@ class AddFood : AppCompatActivity()  {
                 savedHashtags.add("#$hashtag")
                 updateSavedHashtags()
                 editTextHashtag.text.clear()
+            }
+        }
+
+        val countrySpinner: Spinner = findViewById(R.id.countrySpinner)
+        val arrowIcon: ImageView = findViewById(R.id.arrowIcon)
+
+        // 언어 목록 배열 정의
+        val countries = arrayOf("한식", "일식", "중식", "양식", "분식", "디저트")
+
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, countries)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        countrySpinner.adapter = adapter
+
+        // Spinner 아이콘을 설정
+        arrowIcon.setImageResource(R.drawable.baseline_arrow_drop_down_24)
+
+        countrySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+               // 선택됐을때 처리
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                // 아무것도 선택되지 않았을 때 처리
             }
         }
 
@@ -83,4 +107,5 @@ class AddFood : AppCompatActivity()  {
             hashtagsContainer.addView(hashtagTextView)
         }
     }
+
 }

@@ -71,25 +71,15 @@ class Roulette : AppCompatActivity() {
     private fun generateWheelItems()
     {
         val f1 = resources.getDrawable(R.drawable.baseline_food_bank_24)
-        val f2 = resources.getDrawable(R.drawable.baseline_food_bank_24)
-        val f3 = resources.getDrawable(R.drawable.baseline_food_bank_24)
-        val f4 = resources.getDrawable(R.drawable.baseline_food_bank_24)
-        val f5 = resources.getDrawable(R.drawable.baseline_food_bank_24)
-        val f6 = resources.getDrawable(R.drawable.baseline_food_bank_24)
         val food1: Bitmap = drawableToBitmap(f1)
-        val food2: Bitmap = drawableToBitmap(f2)
-        val food3: Bitmap = drawableToBitmap(f3)
-        val food4: Bitmap = drawableToBitmap(f4)
-        val food5: Bitmap = drawableToBitmap(f5)
-        val food6: Bitmap = drawableToBitmap(f6)
 
 
         wheelItems.add(WheelItem(Color.parseColor("#D1382C"), food1, "양식"))
-        wheelItems.add(WheelItem(Color.parseColor("#AE1D00"), food2, "일식"))
-        wheelItems.add(WheelItem(Color.parseColor("#990800"), food3, "디저트"))
-        wheelItems.add(WheelItem(Color.parseColor("#7A0A00"), food4, "중식"))
-        wheelItems.add(WheelItem(Color.parseColor("#821A0A"), food5, "분식"))
-        wheelItems.add(WheelItem(Color.parseColor("#BB0D00"), food6, "한식"))
+        wheelItems.add(WheelItem(Color.parseColor("#AE1D00"), food1, "일식"))
+        wheelItems.add(WheelItem(Color.parseColor("#990800"), food1, "디저트"))
+        wheelItems.add(WheelItem(Color.parseColor("#7A0A00"), food1, "중식"))
+        wheelItems.add(WheelItem(Color.parseColor("#821A0A"), food1, "분식"))
+        wheelItems.add(WheelItem(Color.parseColor("#BB0D00"), food1, "한식"))
         //점수판에 데이터 넣기
         binding.roulette.addWheelItems(wheelItems)
     }

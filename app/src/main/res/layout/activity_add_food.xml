@@ -143,6 +143,46 @@
                 android:layout_height="wrap_content"
                 app:flexWrap="wrap"/>
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="종류"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/R16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <Spinner
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:id="@+id/countrySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_border" />
+
+                    <ImageView
+                        android:id="@+id/arrowIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_arrow_drop_down_24" />
+                </RelativeLayout>
+            </LinearLayout>
+
             <android.widget.Button
                 android:text="추가하기"
                 android:layout_marginTop="60dp"
